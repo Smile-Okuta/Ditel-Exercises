@@ -16,14 +16,8 @@ public class Arithmetic {
 
         int sumSquare = square1 + square2;
 
-//        int largestNum = square1;
-//        if (square2 > largestNum){
-//            largestNum = square2;
-//        }
-
         int diffSquare = square1 - square2;
 
-        // int diffSquare = square1 - square2;
 
         System.out.println("Square of your numbers are "+ square1 +" and " + square2);
         System.out.printf("The addition of the squares is: %d\n", sumSquare);
