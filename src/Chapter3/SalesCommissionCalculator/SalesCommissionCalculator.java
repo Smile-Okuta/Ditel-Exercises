@@ -41,9 +41,4 @@ public class SalesCommissionCalculator {
     public double profit(double num) {
         return 9 * num / 100;
     }
-    public double earning(){
-        this.salary = salary;
-
-        profit() + salary;
-    }
 }
