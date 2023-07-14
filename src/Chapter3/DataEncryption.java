@@ -3,36 +3,46 @@ package Chapter3;
 import java.util.Scanner;
 
 public class DataEncryption {
-    public static void main(String[] args) {
-        Scanner input = new Scanner(System.in);
-
-        int counter = 1;
-        int net = 0;
-        int digit = 0;
-
-//        while(counter <= 4) {
-//            System.out.println("Enter your four digit code: ");
-//                digit = input.nextInt();
-//
-//            if (digit > -1 && digit <= 9){
-//                int total = digit + 7;
-//                net = total % 10;
-//            }
-//            else {
-//                System.out.println("Enter number between 1 - 9");
-//
-//            }
-//            System.out.println(net);
-//            counter++;
+    private  int numbers;
 
 
+    public DataEncryption(int numbers) {
 
-        do{
-            int total = digit + 7;
-            net = total % 10;
-            ++counter;
-        }while (counter <= 4);
+                this.numbers = numbers;
 
-
-            }
     }
+
+
+    public void setNumbers(int numbers) {
+            this.numbers = numbers;
+
+    }
+    public int getNumbers() {
+        return numbers;
+    }
+
+//    public int encryptNum(){
+//
+//            int encrypt = numbers + 7;
+//            int total = encrypt % 10;
+//
+//        return total;
+//    }
+
+    public int swapNum(){
+
+        int fourthNum = numbers % 10;
+        int thirdNum =  (numbers / 10) % 10;
+        int secondNum =  (numbers / 100) % 10;
+        int firstNum = (numbers / 1000) % 10;
+
+        int num4 = (fourthNum + 7) % 10;
+        int num3 = (thirdNum + 7) % 10;
+        int num2 = (secondNum + 7) % 10;
+        int num1 = (firstNum + 7) % 10;
+
+        return num3 * 1000 + num4 * 100 + num1 * 10 + num2;
+    }
+
+
+}
