@@ -1,4 +1,6 @@
-package Chapter3;
+package Chapter3.DataEncryption;
+
+import Chapter3.DataEncryption.DataEncryption;
 
 import java.util.Scanner;
 public class DataEncryptionMain {
