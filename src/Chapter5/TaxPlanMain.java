@@ -2,12 +2,14 @@ package Chapter5;
 
 import java.util.Scanner;
 
-public class TaxPlanAlternatives {
+public class TaxPlanMain {
     public static void main(String[] args) {
-        Scanner input  = new Scanner(System.in);
+        TaxPlan taxPlan = new TaxPlan();
+        Scanner input = new Scanner(System.in);
 
         System.out.println("Enter your Housing expenses for the month: ");
         int housing = input.nextInt();
+
         System.out.println("Enter your Food expenses for the month: ");
         int food = input.nextInt();
         System.out.println("Enter your Clothing expenses for the month: ");
@@ -23,9 +25,10 @@ public class TaxPlanAlternatives {
 
 
         int expenses = housing + food + clothing + transportation + education + healthCare + vacation;
+        taxPlan.setCostExpenses(expenses);
 
-        int percentageExpenses = (23 * expenses) / 100;
+//        int percentageExpenses = (23 * expenses) / 100;
 
-        System.out.printf("Your Total Tax for all your expenses is %d", percentageExpenses);
+        System.out.printf("Your Total Tax for all your expenses is %d", taxPlan.expenses());
     }
 }
