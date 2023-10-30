@@ -18,4 +18,18 @@ class FloorAndCeilTest {
         int floor = 6;
         assertEquals(floor,flow);
     }
+
+    @Test
+    void TestForCeilValue(){
+        int value = FloorAndCeil.myCeil(4.5);
+        int ceil = 5;
+        assertEquals(ceil, value);
+    }
+
+//    @Test
+//    void TestForWrongInput(){
+//        boolean value = FloorAndCeil.myFloor(3);
+//
+//        assert(2.3, FloorAndCeil.myFloor(3.5));
+//    }
 }
