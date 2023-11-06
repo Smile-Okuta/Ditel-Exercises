@@ -6,16 +6,19 @@ public class LargestAndSmallestIntegers {
     public static void main(String[] args) {
         Scanner input = new Scanner(System.in);
 
+        System.out.println("Enter 5 numbers: ");
+        int num1= input.nextInt();
+     int  num2 = input.nextInt();
+        int num3 = input.nextInt();
+      int  num4 = input.nextInt();
+        int num5 = input.nextInt();
+
+        System.out.printf("The largest of your numbers is: %d%n",  LargestAndSmallestIntegers.largest(num1, num2, num3, num4, num5));
+        System.out.printf("The smallest of your numbers is: %d", LargestAndSmallestIntegers.smallest(num1, num2, num3, num4, num5));
 
     }
 
-    public int largest(int num1, int num2, int num3, int num4, int num5){
-//        System.out.println("Enter 5 numbers: ");
-//        num1 = input.nextInt();
-//        num2 = input.nextInt();
-//        num3 = input.nextInt();
-//        num4 = input.nextInt();
-//        num5 = input.nextInt();
+    public static int largest(int num1, int num2, int num3, int num4, int num5){
 
         int largest = num1;
         if (num2 > largest){
@@ -32,16 +35,13 @@ public class LargestAndSmallestIntegers {
         }
 
 
-
         int largestNumber = largest;
 
-//        System.out.printf("The largest of your numbers is: %d%n", largest);
-//        System.out.printf("The smallest of your numbers is: %d", smallest);
-//        System.out.printf("The smallest and largest are %d and %d", smallestNumber, largestNumber);
+
         return largestNumber;
     }
 
-    public int smallest(int num1, int num2, int num3, int num4, int num5){
+    public static int smallest(int num1, int num2, int num3, int num4, int num5){
         int smallest = num2;
         if (num1 < smallest){
             smallest = num1;
