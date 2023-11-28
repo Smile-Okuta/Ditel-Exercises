@@ -10,6 +10,8 @@ public class SquareOfCharacter {
         System.out.println("Enter your Char: ");
         char fill = fillCharacter(num, input.next().charAt(0));
 
+
+        fillCharacter(num, fill);
     }
 
     private static char fillCharacter(int num, char hash){
