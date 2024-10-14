@@ -19,6 +19,7 @@ public class CoinTossing {
 
     }
 
+
     public static void tossGame(int toss) {
         TossCoin tossCoin = null;
         SecureRandom random = new SecureRandom();
@@ -44,17 +45,17 @@ public class CoinTossing {
             } else {
                 System.out.println("No coin was tossed");
             }
-                count++;
+            count++;
         }
 
 
-
-
-            if (tossCoin == TossCoin.HEADS) {
-                System.out.println("HEADS");
-            } else {
-                System.out.println("TAILS");
+            int large = frequency1;
+            if (frequency2 > large){
+                System.out.println("Coin face: TAILS");
+            }else {
+                System.out.println("Coin face: HEADS");
             }
+
 //                System.out.println(tossCoin);
             System.out.println("Face\tFrequency");
             System.out.printf("1\t%d%n2\t%d\n", frequency1, frequency2);
