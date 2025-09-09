@@ -20,7 +20,7 @@ public class Arithmetic {
 
 
         System.out.println("Square of your numbers are "+ square1 +" and " + square2);
-        System.out.printf("The addition of the squares is: %d\n", sumSquare);
-        System.out.printf("The difference of the square is: %d\n", diffSquare);
+        System.out.printf("The addition of the squares is: %d%n", sumSquare);
+        System.out.printf("The difference of the square is: %d%n", diffSquare);
     }
 }
