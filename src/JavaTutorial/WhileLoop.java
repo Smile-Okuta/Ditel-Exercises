@@ -13,18 +13,27 @@ public class WhileLoop {
 
         int count = 1;
 
-        while (name.equalsIgnoreCase("David")){
-            System.out.println("Hello "+ name);
-            count++;
+        while (!name.equalsIgnoreCase("David")){
+            System.out.println("Incorrect, enter name again: ");
 
-            if (!name.equalsIgnoreCase("david") && count <= 3){
-                System.out.println("Incorrect, enter name again: ");
-            } else if (count > 3) {
+
+            if (name.equalsIgnoreCase("david") && count <= 3){
+
+                System.out.println("Hello "+ name);
+
+            }
+            else if (count > 3) {
+
                 System.out.println("Times up");
                 break;
             }
 
+            count++;
+
+
         }
+
+
 
 
 
