@@ -1,5 +1,6 @@
 package JavaTutorial;
 
+import java.util.Objects;
 import java.util.Scanner;
 
 public class WhileLoop {
@@ -7,33 +8,32 @@ public class WhileLoop {
         Scanner input = new Scanner(System.in);
 
 
-        System.out.println("Enter your name: ");
-        String name = input.nextLine();
+        int count = 3;
 
+        while (true){
 
-        int count = 1;
+            System.out.println("Enter your name: ");
+            String name = input.nextLine();
 
-        while (!name.equalsIgnoreCase("David")){
-            System.out.println("Incorrect, enter name again: ");
+            if (name.equals("David")) {
 
-
-            if (name.equalsIgnoreCase("david") && count <= 3){
-
-                System.out.println("Hello "+ name);
-
-            }
-            else if (count > 3) {
-
-                System.out.println("Times up");
+                System.out.println("Hello " + name);
                 break;
+            }else {
+                count --;
+
+                if(count >0){
+                    System.out.println("Wrong name. Try again. (" + count + " attempts )");
+
+                }else {
+                    System.out.println("Time Up");
+                   break;
+                }
             }
 
-            count++;
 
 
         }
-
-
 
 
 
