@@ -8,12 +8,11 @@ public class AccountClassTest {
         Scanner input = new Scanner(System.in);
         int count = 3;
 
-        AccountClass account_1 = new AccountClass();
+        AccountClass account_1 = new AccountClass("Smile", 23.4);
+        displayAccount(account_1);
 
         System.out.println("Enter your name: ");
         String name = input.nextLine();
-        account_1.setName(name);
-        account_1.setBalance(0.0);
 
         System.out.printf("Your account details are: %nName: %s%nBalance Amount: %.2f%n", account_1.getName(), account_1.getBalance());
 
@@ -37,4 +36,17 @@ public class AccountClassTest {
         }
 
     }
+
+
+    public static  void displayAccount(AccountClass accountClass ){
+
+
+        System.out.println(accountClass.getName() + "\nYour balance is " + accountClass.getBalance());
+        
+
+    }
+
+
+
+
 }

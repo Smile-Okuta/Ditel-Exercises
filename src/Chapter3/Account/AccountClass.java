@@ -7,7 +7,10 @@ public class AccountClass {
 
 
 
-
+    public AccountClass(String name, double balance) {
+        this.name = name;
+        this.balance = balance;
+    }
 
 
 
@@ -42,5 +45,7 @@ public class AccountClass {
     public String getName(){
         return name;
     }
+
+
 
 }
