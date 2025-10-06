@@ -58,9 +58,6 @@ public class HealthRecords {
     }
 
 
-    public String getTargetHeartRate(){
-
-    }
 
 
 
