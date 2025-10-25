@@ -10,6 +10,8 @@ public class SalesCommission {
         int count = 1;
         double total = 0;
         String itemName;
+        double itemAmount;
+        double earning = 0;
 
         System.out.println("**************************************************");
         System.out.println("**************************************************\n");
@@ -17,37 +19,33 @@ public class SalesCommission {
         System.out.println("**************************************************");
         System.out.println("**************************************************\n");
 
-        System.out.print("Enter Sales person name:  \n\n");
+        System.out.print("Enter Sales person name:  \n");
         String personName = input.nextLine();
 
         while(true){
 
-            System.out.print("Item " + count + "\nEnter item name or # to cancel:  ");
+            System.out.print("\nItem " + count + "\nEnter item name or # to cancel:  \n");
             itemName = input.nextLine();
-            if (itemName.equalsIgnoreCase("#")){
-                input.close();
 
-                System.out.println("Would you like to calculate another sales Person Item? 'Y' yes - 'N' No");
-                String alph = input.nextLine();
-                if (alph.equalsIgnoreCase( "n")){
+                if (itemName.equalsIgnoreCase("#")){
                     break;
-                } else if (alph.equalsIgnoreCase("y")) {
-                    continue;
                 }
-            }
-                System.out.print("Enter amount:   ");
-                double itemAmount = input.nextDouble();
 
-                SalesCommission salesCommission = new SalesCommission(itemName, itemAmount);
+            System.out.print("Enter amount:   ");
+            itemAmount = input.nextDouble();
+            count++;
 
-                total += salesCommission.getItemAmount();
+            SalesCommission salesCommission = new SalesCommission(itemName, itemAmount);
 
-
-            System.out.printf("item               Value%n%-10d%.2f", count, itemAmount);
-
+            total += salesCommission.getItemAmount();
+            earning = salesCommission.salesEarning(total);
 
 
         }
+
+        System.out.println("Sales person: "+ personName);
+        System.out.println("Total sales:  " + total);
+        System.out.println("Net Pay:  " + earning);
 
 
 
