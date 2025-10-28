@@ -12,18 +12,18 @@ public class TabularOutput {
         while (count <= 5){
             System.out.printf("%n%-10d",count);
             if (count2 <= 25){
-                System.out.printf("%-10d",count * count);
+                System.out.printf("%-10.0f",Math.pow(count, 2));
 
                 count2++;
             }
 
             if (count3 <= 125){
-                System.out.printf("%-10d",count * count * count);
+                System.out.printf("%-10.0f",Math.pow(count, 3));
                 count3++;
             }
 
             if (count4 <= 625){
-                System.out.printf("%-10d",count * count * count * count);
+                System.out.printf("%-10.0f",Math.pow(count,4));
                 count4++;
             }
             count++;
